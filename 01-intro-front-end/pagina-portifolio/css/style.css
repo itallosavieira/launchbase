@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;1,400&display=swap');
-
 :root {
     --purple: #bd93f9;
     --green: #50fa7b;
+    --green-darker: #185226;
     --pink: #ff79c6;
     --light: #f8f8f2;
     --dark: #44475a;
@@ -20,25 +20,39 @@ body {
 }
 
 .header-wrapper {
-    width: 100%;
-    height: auto;
-    padding: 2rem;
+    height: 2rem;
+    padding: 1rem 2em;
     background: var(--background-darker);
 }
 
+.logo-img {
+    width: 7rem;
+    float: left;
+    margin-top: -.5rem;
+}
+
+.shp0 {
+    fill: #ff79c6
+}
+
+.shp1 {
+    fill: #f8f8f2
+}
+
 .nav-wrapper {
-    text-align: center;
+    text-align: right;
+    margin-top: .5rem;
 }
 
 .nav-wrapper ul li {
     display: inline;
-    margin-right:6rem;
+    margin-left: 3rem;
 }
 
 .nav-wrapper ul li a {
     color: var(--light);
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1rem;
     transition: .3s;
 }
 
@@ -47,5 +61,27 @@ body {
     color: var(--pink);
 }
 
+.id-section {
+    text-align: center;
+    padding: 4em 0;
+}
 
+#id-wrapper {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
 
+.perfil-img {
+    width: 220px;
+    border: 2px solid var(--pink);
+    border-radius: 100%;
+    box-shadow: inset 0px 0px 10px var(--pink), 0px 0px 10px var(--pink);
+    transition: all .5s;
+}
+
+.perfil-img:hover {
+    cursor: pointer;
+    border: 2px solid var(--pink);
+    box-shadow: inset 0px 0px 5px var(--pink), 0px 0px 11px var(--pink);
+}
