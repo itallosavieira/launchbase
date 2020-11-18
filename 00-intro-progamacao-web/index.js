@@ -64,7 +64,7 @@ function printApprovedOrFlunked(group) {
         if (student.approved) {
             console.log(`${student.name} grade: ${student.grade} > Approved(a)!`)
         } else {
-            console.log(`${student.name} grade: ${student.grade} > Flunked(a)!`)
+            console.log(`${student.name} grade ${student.grade} > Flunked(a)!`)
         }
     }
 };
