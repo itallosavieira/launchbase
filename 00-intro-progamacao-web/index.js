@@ -1,53 +1,106 @@
-const turmaA = [
+const groupA = [
     {
-        nome: 'Itallo',
-        nota: 9.8
+        name: 'Itallo',
+        grade: 9.8
     },
     {
-        nome: 'Leticia',
-        nota: 10
+        name: 'Leticia',
+        grade: 10
     },
     {
-        nome: 'Rafa',
-        nota: 2.2
+        name: 'Rafa',
+        grade: 2.2
     }
-]
+];
 
-const turmaB = [
+const groupB = [
     {
-        nome: 'Italla',
-        nota: 2
+        name: 'Italla',
+        grade: 2
     },
     {
-        nome: 'Leticio',
-        nota: 5
+        name: 'Leticio',
+        grade: 5
     },
     {
-        nome: 'Rafo',
-        nota: 7.2
+        name: 'Rafo',
+        grade: 7.2
     }
-]
+];
 
-function calculaMedia(turma) {
-    let notaDoAluno = 0;
+function calculaAverage(group) {
+    let gradeOfStudent = 0;
 
-    for (let i = 0; i < turma.length; i++) {
-        notaDoAluno += turma[i].nota;
-    }
+    for (let i = 0; i < group.length; i++) {
+        gradeOfStudent += group[i].grade;
+    };
 
-    return notaDoAluno / turma.length;
-}
+    return (gradeOfStudent / group.length).toFixed(2);
+};
 
-const mediaA = calculaMedia(turmaA);
-const mediaB = calculaMedia(turmaB);
-
-function enviaMensagem(turma, media) {
-    if (media >= 5) {
-        console.log(`A média da ${turma} foi de ${media}. Parabéns!`);
+function sendMessage(group, average) {
+    if (average >= 5) {
+        console.log(`${group} average: ${average}. Congrats!`);
     } else {
-        console.log(`A média da ${turma} foi de ${media}. Horrível!`)
+        console.log(`${group} average ${average}. Bad!`)
     }
-}
+};
 
-enviaMensagem('TurmaA', mediaA);
-enviaMensagem('TurmaB', mediaB);
+function checkIsApproved(group) {
+
+    for (let student of group) {
+        if (student.grade < 5) {
+            student.approved = false;
+        } else {
+            student.approved = true;
+        }
+    }
+};
+
+function printApprovedOrFlunked(group) {
+    checkIsApproved(group);
+
+    for (let student of group) {
+        if (student.approved) {
+            console.log(`${student.name} grade: ${student.grade} > Approved(a)!`)
+        } else {
+            console.log(`${student.name} grade: ${student.grade} > Flunked(a)!`)
+        }
+    }
+};
+
+const averageA = calculaAverage(groupA);
+const averageB = calculaAverage(groupB);
+
+sendMessage('groupA', averageA);
+sendMessage('groupB', averageB);
+
+printApprovedOrFlunked(groupA);
+printApprovedOrFlunked(groupB);
+
+console.table(groupB);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
