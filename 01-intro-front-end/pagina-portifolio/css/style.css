@@ -1,3 +1,5 @@
+/* ########## SETTINGS ########## */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;1,400&display=swap');
 :root {
     --purple: #bd93f9;
@@ -19,69 +21,179 @@ body {
     background: var(--background);
 }
 
-.header-wrapper {
-    height: 2rem;
-    padding: 1rem 2em;
-    background: var(--background-darker);
+/* ########## end SETTINGS ########## */
+
+/* ########## HEADER ########## */
+.header {
+    width: 100%;
+    text-align: center;
 }
 
 .logo-img {
-    width: 7rem;
-    float: left;
-    margin-top: -.5rem;
-}
-
-.shp0 {
-    fill: #ff79c6
-}
-
-.shp1 {
-    fill: #f8f8f2
+    width: 15rem;
+    margin-top: 1.5rem;
 }
 
 .nav-wrapper {
-    text-align: right;
-    margin-top: .5rem;
+    margin: 2rem;
 }
 
 .nav-wrapper ul li {
     display: inline;
-    margin-left: 3rem;
+
 }
 
 .nav-wrapper ul li a {
     color: var(--light);
     text-decoration: none;
     font-size: 1rem;
-    transition: .3s;
+    margin: .5rem;
+    padding: .2rem;
+    border-bottom: 2px solid var(--background);
+    transition: .5s;
+
 }
 
 .nav-wrapper ul li a:hover {
     cursor: pointer;
+    opacity: .8;
+    border-bottom: 2px solid var(--pink);
+}
+
+.nav-wrapper ul li a:active {
     color: var(--pink);
+    border-bottom-color:var(--light);
+
 }
 
-.id-section {
-    text-align: center;
-    padding: 4em 0;
+/* ########## SVG logo ########## */
+
+.shp0 {
+    fill: var(--pink);
+    transition: .3s ease-in-out;
 }
 
-#id-wrapper {
-    width: 100%;
-    text-align: center;
+.logo-img:hover>.shp0 {
+    fill: var(--light)
+}
+
+.shp1 {
+    fill: var(--light);
+    transition: .5s;
+}
+
+.logo-img:hover>.shp1 {
+    fill: var(--pink);
+}
+
+.logo-img:active>.shp0 {
+    fill: var(--pink);
+    fill-opacity: .8;
+}
+
+.logo-img:active>.shp1 {
+    fill: var(--light);
+    fill-opacity: .8;
+}
+
+/* ########## end SVG logo ########## */
+
+/* ########## end HEADER ########## */
+
+/* ########## MAIN ########## */
+
+#id-section,
+#skills-section,
+#projects-section {
+    max-width: 900px;
+    text-align: left;
+    padding: 2em 0;
     margin: 0 auto;
 }
 
-.perfil-img {
+.section-wrapper {
+    max-width: 756px;
+    padding: 1rem;
+    text-align: center;
+    margin: 0 auto;
+    color: var(--light);
+}
+
+.section-title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--light);
+    margin: 2rem auto;
+    transition: .5s;
+    opacity: .05;
+}
+
+.section-wrapper:hover > .section-title {
+    opacity: .1;
+}
+
+/* ########## ID Section ########## */
+
+.id-img {
     width: 220px;
     border: 2px solid var(--pink);
     border-radius: 100%;
-    box-shadow: inset 0px 0px 10px var(--pink), 0px 0px 10px var(--pink);
+    box-shadow: inset 0px 0px 2px var(--pink), 0px 0px 2px var(--pink);
     transition: all .5s;
+    margin: 0 auto;
+    display: block
 }
 
-.perfil-img:hover {
+.id-img:hover {
     cursor: pointer;
     border: 2px solid var(--pink);
     box-shadow: inset 0px 0px 5px var(--pink), 0px 0px 11px var(--pink);
 }
+
+.id-apresentation {
+    text-align: left;
+    line-height: 2rem;
+    margin: 1rem 0;
+    font-size: 1.25rem;
+}
+
+.id-apresentation em {
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 2px solid var(--background);
+    transition: .5s;
+}
+
+.section-wrapper:hover > .id-apresentation em {
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 2px solid var(--pink);
+}
+
+.id-apresentation span {
+    font-size: 1rem;
+    border-bottom: 1px solid var(--light);
+    font-style: italic;
+    opacity: .6;
+    transition: .5s;
+}
+
+.section-wrapper:hover > .id-apresentation span {
+    color: var(--pink);
+}
+
+.id-apresentation span:hover {
+    cursor: pointer;
+    font-style: italic;
+    opacity: 1;
+}
+
+.id-quote {
+    margin: 2rem;
+    font-style: italic;
+    opacity: .8;
+}
+
+/* ########## end ID Section ########## */
+
+/* ########## ID Section ########## */

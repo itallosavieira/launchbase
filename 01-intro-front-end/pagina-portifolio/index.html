@@ -9,16 +9,24 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
 </head>
 
 <body>
-    <header class="header-wrapper">
-        <nav class="nav-wrapper">
+    <header class="header">
+        <div class="header-wrapper">
+
+
             <h1 class="id-title">
                 <a href="#">
                     <svg class="logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1279 281" width="1279"
                         height="alto">
+                        <linearGradient id="gradient-horizontal">
+                            <stop offset="0%" stop-color="var(--color-stop-1)" />
+                            <stop offset="60%" stop-color="var(--color-stop-2)" />
+                            <stop offset="100%" stop-color="var(--color-stop-3)" />
+                        </linearGradient>
                         <path id="itallo sa " class="shp0"
                             d="M0.01 42.78L42.85 42.77L42.85 0L0 0.01L0.01 42.78ZM0.75 275.75L42.21 275.74L42.17 74.03L0.71 74.04L0.75 275.75Z" />
                         <path id="itallo sa " fill-rule="evenodd" class="shp1"
@@ -27,27 +35,73 @@
                             d="M1147.97 -0.11L1190.97 -0.12L1190.98 42.88L1147.98 42.89L1147.97 -0.11Z" />
                     </svg>
                 </a>
+            </h1>
+            <nav class="nav-wrapper">
                 <ul>
                     <li>
-                        <a href="#">About/</a>
+                        <a href="#skills-section">skills</a>
                     </li>
                     <li>
-                        <a href="#">Projects/</a>
+                        <a href="#projects-section">projects</a>
                     </li>
                     <li>
-                        <a href="#">Skills/</a>
+                        <a href="#id-section">contact</a>
                     </li>
                 </ul>
-        </nav>
-    </header>
-
-    <section class="id-section">
-        <div id="id-wrapper">
-            <img class="perfil-img" src="img/perfil.png" alt="Itallo Sá">
-            <h2>Front-end Developer</h2>
-            <p>"Discipline is freedom."</p>
+            </nav>
+            <div class="social-icons-wrapper">
+                <ul>
+                    <li>
+                        <a href="https://github.com/itallosavieira">
+                        </a>
+                    </li>
+                    <li>
+                        <a href=""></a>
+                    </li>
+                    <li>
+                        <a href=""></a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </section>
+    </header>
+    <main>
+        <section class="id-section">
+            <img class="id-img" src="img/perfil.png" alt="Itallo Sá">
+
+            <div class="section-wrapper">
+
+                <p class="id-apresentation">Hi! I'm <em>Itallo Sá</em>, a <em>Front-End Developer</em> who loves
+                    <em>HTML, CSS, and JS.</em>
+                </p>
+
+                <p class="id-apresentation">I like things that challenge me and I believe that facing them makes us
+                    better.
+                </p>
+
+                <p class="id-apresentation">Currently, I do personal projects to expand my knowledge on web
+                    development
+                    with
+                    a focus on the Front-End. <span>What am I studying now?</span>
+                </p>
+                <p class="id-quote"> "Discipline is freedom."</p>
+
+            </div>
+        </section>
+
+        <section id="skills-section">
+            <div class="section-wrapper">
+                <h2 class="section-title">skills</h2>
+            </div>
+        </section>
+
+        <section id="projects-section">
+            <div class="section-wrapper">
+                <h2 class="section-title">projects</h2>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
 </body>
 
 </html>
