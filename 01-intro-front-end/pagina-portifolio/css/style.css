@@ -121,7 +121,7 @@ body {
     max-width: 900px;
     text-align: left;
     padding: 2em 0;
-    margin: 5rem auto 0;
+    margin: 2rem auto 0;
 }
 
 .section-wrapper {
@@ -155,9 +155,13 @@ body {
     filter: grayscale(100%);
     border-radius: 100%;
     transition: all .5s;
-    margin: 6rem auto 0;
+    margin: 3rem auto 0;
     display: block;
     opacity: .8;
+}
+
+.id-img:hover {
+    border-color: var(--green);
 }
 
 .section-wrapper:hover > .id-img {
@@ -184,7 +188,7 @@ body {
     margin: 1rem 1.5rem;
     font-size: 1.25rem;
     transition: .3s ease-in-out;
-    opacity: .6;
+    opacity: .9;
 }
 
 .section-wrapper:hover > .id-apresentation {
@@ -211,6 +215,7 @@ body {
     opacity: .6;
     transition: .5s;
     text-decoration: underline;
+    margin-top: 5rem;
 }
 
 .section-wrapper:hover > .id-study-link {
