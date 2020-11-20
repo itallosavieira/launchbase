@@ -1,4 +1,4 @@
-/* ########## SETTINGS ########## */
+/* ##########       SETTINGS         ########## */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;1,400&display=swap');
 :root {
@@ -10,10 +10,24 @@
     --dark: #44475a;
     --background: #282a36;
     --background-darker: #20222d;
+    --shadow-pink: inset 0px 0px 2px var(--pink), 0px 0px 2px var(--pink);
+    --shadow-pink-line: 1px 4px 5px -7px var(--light);
 }
 
 * {
     list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 body {
@@ -23,7 +37,8 @@ body {
 
 /* ########## end SETTINGS ########## */
 
-/* ########## HEADER ########## */
+/* ##########       HEADER       ########## */
+
 .header {
     width: 100%;
     text-align: center;
@@ -35,38 +50,38 @@ body {
 }
 
 .nav-wrapper {
-    margin: 2rem;
+    margin: 1rem;
 }
 
 .nav-wrapper ul li {
     display: inline;
-
 }
 
 .nav-wrapper ul li a {
     color: var(--light);
     text-decoration: none;
-    font-size: 1rem;
-    margin: .5rem;
+    font-size: .95rem;
+    margin: .3rem;
     padding: .2rem;
-    border-bottom: 2px solid var(--background);
-    transition: .5s;
-
+    border-bottom: 1px solid var(--background);
+    transition: .3s ease-in-out;
+    opacity: .6;
 }
 
 .nav-wrapper ul li a:hover {
     cursor: pointer;
-    opacity: .8;
-    border-bottom: 2px solid var(--pink);
+    opacity: 1;
+    border-bottom: 1px solid var(--pink);
+    box-shadow: var(--shadow-pink-line);
 }
 
 .nav-wrapper ul li a:active {
+    opacity: 1;
     color: var(--pink);
-    border-bottom-color:var(--light);
-
+    border-bottom-color: var(--light);
 }
 
-/* ########## SVG logo ########## */
+/* ##########       SVG logo         ########## */
 
 .shp0 {
     fill: var(--pink);
@@ -79,7 +94,7 @@ body {
 
 .shp1 {
     fill: var(--light);
-    transition: .5s;
+    transition: .3s ease-in-out;
 }
 
 .logo-img:hover>.shp1 {
@@ -100,22 +115,20 @@ body {
 
 /* ########## end HEADER ########## */
 
-/* ########## MAIN ########## */
+/* ##########       MAIN         ########## */
 
-#id-section,
-#skills-section,
-#projects-section {
+#id-section, #skills-section, #projects-section {
     max-width: 900px;
     text-align: left;
     padding: 2em 0;
-    margin: 0 auto;
+    margin: 5rem auto 0;
 }
 
 .section-wrapper {
     max-width: 756px;
     padding: 1rem;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 6rem;
     color: var(--light);
 }
 
@@ -123,31 +136,46 @@ body {
     font-size: 3rem;
     text-transform: uppercase;
     color: var(--light);
-    margin: 2rem auto;
+    margin: 0rem auto;
     transition: .5s;
     opacity: .05;
 }
 
-.section-wrapper:hover > .section-title {
+.section-wrapper:hover>.section-title {
     opacity: .1;
 }
 
-/* ########## ID Section ########## */
-
+/* ##########       ID Section      ########## */
 .id-img {
     width: 220px;
-    border: 2px solid var(--pink);
+    height: 220px;
+    position: relative;
+    border: 1px solid var(--dark);
+    box-shadow: var(--shadow-pink);
+    filter: grayscale(100%);
     border-radius: 100%;
-    box-shadow: inset 0px 0px 2px var(--pink), 0px 0px 2px var(--pink);
     transition: all .5s;
     margin: 6rem auto 0;
     display: block;
+    opacity: .8;
 }
 
-.id-img:hover {
+.section-wrapper:hover > .id-img {
     cursor: pointer;
-    border: 2px solid var(--pink);
-    box-shadow: inset 0px 0px 5px var(--pink), 0px 0px 11px var(--pink);
+    border: 1px solid var(--pink);
+    filter: none;
+    box-shadow: var(--shadow-pink);
+    opacity: 1;
+}
+
+.id-img img{
+    width: 220px;
+    transition: all .5s;
+    filter: grayscale(100%);
+}
+
+.section-wrapper:hover > .id-img img {
+    filter: none;
 }
 
 .id-apresentation {
@@ -155,22 +183,29 @@ body {
     line-height: 2rem;
     margin: 1rem 1.5rem;
     font-size: 1.25rem;
+    transition: .3s ease-in-out;
+    opacity: .6;
 }
 
-.id-apresentation em {
-    font-weight: bold;
-    font-style: italic;
-    border-bottom: 2px solid var(--background);
-    transition: .5s;
+.section-wrapper:hover > .id-apresentation {
+    opacity: 1;
 }
 
-.section-wrapper:hover > .id-apresentation em {
-    font-weight: bold;
+.id-apresentation .id-main-information {
+    font-weight: bolder;
     font-style: italic;
-    border-bottom: 2px solid var(--pink);
+    border-bottom: 1px solid var(--background);
+    transition: .3s ease-in-out;
+
+}
+
+.section-wrapper:hover>.id-apresentation .id-main-information {
+    border-bottom: 1px solid var(--pink);
+    box-shadow: var(--shadow-pink-line);
 }
 
 .id-study-link {
+    color: var(--pink);
     font-size: 1rem;
     font-style: italic;
     opacity: .6;
@@ -178,22 +213,43 @@ body {
     text-decoration: underline;
 }
 
-.id-study-link:hover {
-    color: var(--pink);
-    cursor: pointer;
-    font-style: italic;
+.section-wrapper:hover > .id-study-link {
     opacity: 1;
 }
 
-.id-quote {
-    margin: 5rem auto -5rem;
-    font-style: italic;
-    opacity: .8;
-    color: var(--light);
-    text-align: center;
-    font-size: 1rem;
+.id-study-link:hover {
+    color: var(--green);
+    cursor: pointer;
 }
 
 /* ########## end ID Section ########## */
 
-/* ########## ID Section ########## */
+/* ##########       FOOTER      ########## */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    padding-top: .75rem;
+    background-color: var(--background-darker);
+    text-align: center;
+}
+
+.footer ul li {
+    display: inline;
+    margin: 0 1.5rem;
+}
+
+.footer ul li a i {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--light);
+    opacity: .6;
+    transition: .3s ease-in-out;
+}
+
+.footer ul li a i:hover {
+    opacity: 1;
+    color: var(--pink);
+}
