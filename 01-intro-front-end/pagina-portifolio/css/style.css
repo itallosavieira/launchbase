@@ -63,19 +63,19 @@ body {
     font-size: .95rem;
     margin: .3rem;
     padding: .2rem;
-    border-bottom: 1px solid var(--background);
-    transition: .3s ease-in-out;
+    transition: .3s;
     opacity: .6;
+    text-transform: uppercase;
 }
 
 .nav-wrapper ul li a:hover {
     cursor: pointer;
+    font-weight: 500;
     opacity: 1;
-    border-bottom: 1px solid var(--pink);
-    box-shadow: var(--shadow-pink-line);
 }
 
 .nav-wrapper ul li a:active {
+    transition: 0;
     opacity: 1;
     color: var(--pink);
     border-bottom-color: var(--light);
@@ -155,7 +155,7 @@ body {
     filter: grayscale(100%);
     border-radius: 100%;
     transition: all .5s;
-    margin: 3rem auto 0;
+    margin: 3rem auto 4rem;
     display: block;
     opacity: .8;
 }
@@ -258,17 +258,26 @@ body {
 /*=== === === CARD === === ===*/
 
 #cards {
-    max-width: 900px;
-    margin: 3rem auto;
+    max-width: 756px;
+    margin: 4rem auto;
+    padding: 1rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
 }
 
 .card {
-    background-color: var(--purple);
+    background-color: var(--background-darker);
+    border: .5rem solid var(--background-darker);
     border-radius: .5rem;
     cursor: pointer;
+    opacity: .8;
+    transition: .3s;
+    color: var(--light);
+}
+
+.card:hover {
+    opacity: 1;
 }
 
 .card__img-container img {
@@ -288,10 +297,16 @@ body {
 }
 
 .card__price {
-    background-color: var(--purple);
-    filter: brightness(90%);
+    background-color: var(--background);
     padding: .5rem;
+    border-radius: 1rem;
     text-align: center;
+    transition: .3s;
+}
+
+.card:hover .card__price {
+    color: var(--green);
+
 }
 
 /*=== === === MODAL === === ===*/
@@ -327,16 +342,18 @@ body {
      position: absolute;
      right: 1rem;
      color: var(--light);
-     font-size: 2rem;
+     font-size: 3rem;
      transform: rotate(45deg);
      transition: .3s;
+     opacity: .8;
  }
 
  .modal .close-modal:hover {
-    transform: rotate(135deg) scale(1.2);
+     opacity: 1;
+    transform: rotate(45deg) scale(1.1);
  }
 
  .modal .close-modal:active {
-    transform: rotate(135deg) scale(.9);
+    transform: rotate(45deg) scale(.9);
     color: var(--pink);
  }
