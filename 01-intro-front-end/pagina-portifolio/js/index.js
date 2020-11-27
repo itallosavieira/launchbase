@@ -5,6 +5,7 @@ const closeModal = document.querySelector('.close-modal');
 
 for (let card of cards) {
     card.querySelector('img').src = `https://img.youtube.com/vi/${card.id}/maxresdefault.jpg`
+
     card.addEventListener('click', function(){
         modalOverlay.classList.add('active');
         modalOverlay.querySelector('iframe').src = `https://www.youtube.com/embed/${card.id}`;
