@@ -1,4 +1,3 @@
-/*=== SETTINGS ===*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;1,400&display=swap");
 * {
   list-style: none;
@@ -16,29 +15,36 @@ a {
 
 body {
   font-family: 'Roboto Mono', monospace;
-  background: #f8f8f2; }
+  background-color: #f8f8f2; }
 
-/*=== end SETTINGS ===*/
-/*=== HEADER ===*/
+.main {
+  margin: 0 auto;
+  max-width: 900px; }
+
 .header {
   width: 100%;
   height: auto;
   padding: .5rem;
   border: 2px dotted #fbdfdb; }
+  .header > .header-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+    margin: 0 auto; }
 
-.header-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 900px;
-  margin: 0 auto; }
-  .header-wrap > .nav {
-    display: flex;
-    justify-content: flex-end; }
-  .header-wrap > .nav > .item {
+.logo > a img {
+  transition: .2s; }
+  .logo > a img:hover {
+    filter: invert(30%); }
+
+.nav {
+  display: flex;
+  justify-content: flex-end; }
+  .nav > .link {
     color: #282a36;
     margin: .5rem 1rem;
     transition: .3s; }
-    .header-wrap > .nav > .item:hover {
-      opacity: .6; }
+    .nav > .link:hover {
+      opacity: .7; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */

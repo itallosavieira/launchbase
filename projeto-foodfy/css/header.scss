@@ -1,0 +1,43 @@
+// *** HEADER ***
+.header {
+    width: 100%;
+    height: auto;
+    padding: .5rem;
+    border: 2px dotted $salmon;
+
+    > .header-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
+
+// *** LOGO ***
+.logo {
+    
+    > a img {
+        transition: .2s;
+
+        &:hover {
+            filter: invert(30%);
+        }
+    }
+}
+
+
+// *** NAV ***
+.nav {
+    display: flex;
+    justify-content: flex-end;
+
+    > .link {
+        color: $dark;
+        margin: .5rem 1rem;
+        transition: .3s;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+}
