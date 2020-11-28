@@ -1,0 +1,44 @@
+/*=== SETTINGS ===*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;1,400&display=swap");
+* {
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+ol,
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  background: #f8f8f2; }
+
+/*=== end SETTINGS ===*/
+/*=== HEADER ===*/
+.header {
+  width: 100%;
+  height: auto;
+  padding: .5rem;
+  border: 2px dotted #fbdfdb; }
+
+.header-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 900px;
+  margin: 0 auto; }
+  .header-wrap > .nav {
+    display: flex;
+    justify-content: flex-end; }
+  .header-wrap > .nav > .item {
+    color: #282a36;
+    margin: .5rem 1rem;
+    transition: .3s; }
+    .header-wrap > .nav > .item:hover {
+      opacity: .6; }
+
+/*# sourceMappingURL=style.css.map */
