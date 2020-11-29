@@ -18,15 +18,17 @@ body {
   background-color: #f8f8f2; }
 
 .main {
-  margin: 0 auto;
+  padding: 1rem;
+  margin: 1rem auto;
   max-width: 900px; }
 
 .header {
   width: 100%;
   height: auto;
   padding: .5rem;
-  border: 2px dotted #fbdfdb; }
+  top: 0; }
   .header > .header-wrap {
+    padding: .5rem 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: 900px;
@@ -46,5 +48,31 @@ body {
     transition: .3s; }
     .nav > .link:hover {
       opacity: .7; }
+
+.cover {
+  width: 100%;
+  height: auto;
+  padding: 0 3rem;
+  background-color: #fbdfdb;
+  border-radius: 1rem;
+  display: grid;
+  position: relative;
+  grid-template-columns: 1.5fr 1fr; }
+  .cover > .info {
+    height: auto;
+    margin: 6rem 1rem; }
+    .cover > .info > .title {
+      color: #282a36;
+      margin-bottom: 1rem;
+      font-size: 2rem; }
+    .cover > .info > .description {
+      color: #777;
+      font-size: 1rem;
+      line-height: 1.5rem; }
+  .cover > .image {
+    position: absolute;
+    right: 4rem;
+    bottom: 0;
+    margin-bottom: -.3rem; }
 
 /*# sourceMappingURL=main.css.map */

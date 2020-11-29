@@ -3,9 +3,11 @@
     width: 100%;
     height: auto;
     padding: .5rem;
-    border: 2px dotted $salmon;
+    top: 0;
+
 
     > .header-wrap {
+        padding: .5rem 1rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
         max-width: 900px;

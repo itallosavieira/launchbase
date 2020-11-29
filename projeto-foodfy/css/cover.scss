@@ -1,0 +1,36 @@
+// *** COVER ***
+
+.cover {
+    width: 100%;
+    height: auto;
+    padding: 0 3rem;
+    background-color: $salmon;
+    border-radius: 1rem;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1.5fr 1fr;
+
+    > .info {
+        height: auto;
+        margin: 6rem 1rem;
+
+        > .title {
+            color: $dark;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        > .description {
+            color: $grey-dark;
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+    }
+
+    > .image {
+        position: absolute;
+        right: 4rem;
+        bottom: 0;
+        margin-bottom: -.3rem;
+    }
+}
