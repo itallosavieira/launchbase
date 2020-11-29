@@ -18,20 +18,21 @@
         cursor: pointer;
     }
     &:hover > .image {
-        filter: brightness(100%);
+        filter: brightness(105%);
     }
 
     > .image {
         transition: .2s;
         max-width: 100%;
         border-radius: 1rem;
-        filter: brightness(85%);
+        filter: brightness(90%);
     }
 
     > .info {
         > .title {
             font-size: 1rem;
             font-weight: normal;
+            margin: .5rem 0 .2rem;
         }
 
         > .author {
