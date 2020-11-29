@@ -1,6 +1,4 @@
 .footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     height: auto;
     padding: 1rem;
@@ -9,7 +7,7 @@
 
     > .description {
         line-height: 2rem;
-        font-size: 1rem;
+        font-size: .75rem;
         color: $grey-dark;
     }
 }

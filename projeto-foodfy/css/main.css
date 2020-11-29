@@ -80,9 +80,31 @@ body {
     bottom: 0;
     margin-bottom: -.3rem; }
 
+.recipes > .title {
+  margin: 3rem 0 1rem; }
+
+.recipes-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem 1rem; }
+
+.recipe:hover {
+  cursor: pointer; }
+.recipe:hover > .image {
+  filter: brightness(100%); }
+.recipe > .image {
+  transition: .2s;
+  max-width: 100%;
+  border-radius: 1rem;
+  filter: brightness(85%); }
+.recipe > .info > .title {
+  font-size: 1rem;
+  font-weight: normal; }
+.recipe > .info > .author {
+  font-size: .75rem;
+  color: #777; }
+
 .footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: auto;
   padding: 1rem;
@@ -90,7 +112,7 @@ body {
   background-color: #eee; }
   .footer > .description {
     line-height: 2rem;
-    font-size: 1rem;
+    font-size: .75rem;
     color: #777; }
 
 /*# sourceMappingURL=main.css.map */

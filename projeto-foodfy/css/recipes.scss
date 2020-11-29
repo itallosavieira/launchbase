@@ -1,0 +1,43 @@
+// *** RECIPES ***
+
+.recipes {
+    > .title {
+        margin: 3rem 0 1rem;
+    }
+}
+
+.recipes-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem 1rem;
+}
+
+.recipe {
+
+    &:hover {
+        cursor: pointer;
+    }
+    &:hover > .image {
+        filter: brightness(100%);
+    }
+
+    > .image {
+        transition: .2s;
+        max-width: 100%;
+        border-radius: 1rem;
+        filter: brightness(85%);
+    }
+
+    > .info {
+        > .title {
+            font-size: 1rem;
+            font-weight: normal;
+        }
+
+        > .author {
+            font-size: .75rem;
+            color: $grey-dark;
+        }
+    }
+}
+
