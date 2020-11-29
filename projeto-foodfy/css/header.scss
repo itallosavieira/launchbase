@@ -4,6 +4,10 @@
     height: auto;
     padding: .5rem;
     top: 0;
+    position: fixed;
+    background-color: $light;
+    z-index: 9;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 5px;
 
 
     > .header-wrap {
